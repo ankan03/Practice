@@ -7,8 +7,8 @@ public class InheritanceInConstructorDemo {
 
 
 
-//        B b = new B(); //When sub class object is created super class default constructor is created
-//        B b = new B(1);//When sub class object is created super class default constructor is created
+//        B b = new B(); //When sub class object is created super class default constructor is called
+//        B b = new B(1);//When sub class object is created super class default constructor is called
 
         A a = new B(1);
     }
