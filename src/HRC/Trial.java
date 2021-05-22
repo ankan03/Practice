@@ -1,6 +1,6 @@
 package HRC;
 
-public class Tril {
+public class Trial {
     public static void main(String[] args) {
         System.out.println("After Hardening");
     }
