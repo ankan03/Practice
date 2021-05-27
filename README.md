@@ -1,7 +1,7 @@
 # Practice
 Beginner level problem practice
 
-## In Eclipse For creating new  Dynamic Web Project
+### In Eclipse For creating new  Dynamic Web Project
 
 1. File -> New -> Dynamic Web Project -> enter name of the project -> next -> select 'src' -> next -> select 'Generate web.xml' -> finish
 
@@ -19,7 +19,7 @@ taskkill /F /pid 1088[1088 will differ according to the 1st command's output]
 
 
 
-FOR IMPORTING EXISTING PROJECT
+### FOR IMPORTING EXISTING PROJECT
 
 1. File -> import -> Select General -> Select Existing project into Workspace -> next -> In 'Select root directory' browse to select the particular file -> Finish
 
