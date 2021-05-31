@@ -1,12 +1,13 @@
-package com.hrc.jdbc;
+// 3.Write a program to print the records in Descending Order using JDBC.
+package com.hrc.assignment.assignment6;
+
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 
-public class RetrieveDataFromExistingDatabase {
-
+public class Q3 {
 	public static void main(String[] args) {
 		Connection dbcon=null;
 		PreparedStatement pstmt=null;
@@ -16,7 +17,7 @@ public class RetrieveDataFromExistingDatabase {
 		String username="root";
 		String password="root";
 		
-		String query = "Select * from account_details";
+		String query = "SELECT * FROM account_details ORDER BY account_id DESC;";
 		
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -25,7 +26,7 @@ public class RetrieveDataFromExistingDatabase {
 			
 			result = pstmt.executeQuery();
 			while(result.next()) {
-				System.out.println("account_id: "+result.getString(1)+"\taccount_name: "+result.getString(1)+"\taccount_number: "+result.getString(2));
+				System.out.println("account_id: "+result.getString(1)+"\taccount_name: "+result.getString(2)+"\tdocument_number: "+result.getString(3));
 			}
 			
 			result.close();
@@ -37,7 +38,4 @@ public class RetrieveDataFromExistingDatabase {
 			e.printStackTrace();
 		}
 	}
-
-
-
 }
