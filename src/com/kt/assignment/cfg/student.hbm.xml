@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.kt.assignment.model.Student" table="student">
+		<id name="studentId" type="java.lang.Integer"  column="student_id" >
+		<generator class="increment"/>
+		</id>
+		<property name="rollNumber" type="java.lang.Integer" not-null="true" column="student_roll" />
+		<property name="name" type="string" not-null="true" length="45" column="student_name" />
+		<property name="age" type="java.lang.Integer" not-null="true"  column="student_age" />
+		<property name="gender" type="string" length="1" column="student_gender" />
+	</class>
+
+</hibernate-mapping>  

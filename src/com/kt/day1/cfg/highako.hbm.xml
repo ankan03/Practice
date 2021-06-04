@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-mapping>
+	<class name="com.kt.day1.model.Highako" table="highako">
+		<id name="empID" type="java.lang.Integer" column="pk_emp_id" />
+		<property name="empName" type="string" column="emp_name" />
+	</class>
+
+</hibernate-mapping>  

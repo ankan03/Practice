@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-mapping>
+	<class name="com.practice.Employee" table="employee">
+		<id name="eId" type="java.lang.Integer" column="employee_id" />
+		<property name="eName" type="string" column="employee_name" />
+	</class>
+
+</hibernate-mapping>  
