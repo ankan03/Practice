@@ -19,6 +19,9 @@ public class Student {
 	@Column(name = "student_city")
 	private String city;
 	
+	//Embedding Objects
+	private Cirtificate cirtificate;
+	
 	public Student() {
 		super();
 	}
@@ -51,6 +54,15 @@ public class Student {
 
 	public void setCity(String city) {
 		this.city = city;
+	}
+
+	
+	public Cirtificate getCirtificate() {
+		return cirtificate;
+	}
+
+	public void setCirtificate(Cirtificate cirtificate) {
+		this.cirtificate = cirtificate;
 	}
 
 	@Override
