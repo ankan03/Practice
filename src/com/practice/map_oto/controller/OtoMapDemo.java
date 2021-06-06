@@ -1,4 +1,4 @@
-package com.practice.map.controller;
+package com.practice.map_oto.controller;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -10,12 +10,12 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-import com.practice.map.model.Answer;
-import com.practice.map.model.Question;
+import com.practice.map_oto.model.Answer;
+import com.practice.map_oto.model.Question;
 import com.practice.model.Address;
 import com.practice.model.Student;
 
-public class MapDemo {
+public class OtoMapDemo {
 	public static void main(String[] args) throws IOException {
 		Configuration config = new Configuration().configure("com/practice/cfg/hibernate.cfg.xml");
 		SessionFactory factory = config.buildSessionFactory();

@@ -1,4 +1,4 @@
-package com.practice.map.model;
+package com.practice.map_oto.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

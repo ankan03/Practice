@@ -19,8 +19,8 @@
 
 		<mapping class="com.practice.model.Student" />
 		<mapping class="com.practice.model.Address" />
-		<mapping class="com.practice.map.model.Answer" />
-		<mapping class="com.practice.map.model.Question" />
+		<mapping class="com.practice.map_oto.model.Answer" />
+		<mapping class="com.practice.map_oto.model.Question" />
 
 	</session-factory>
 
