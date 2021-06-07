@@ -1,4 +1,7 @@
-package com.practice.map_oto.model;
+package com.practice.map_otm.model;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -6,31 +9,31 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "question")
-public class Question {
+@Table(name = "question_otm")
+public class QuestionOtm {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "question_no")
 	private int questionNo;
 	
-	@OneToOne
-	@JoinColumn(name = "fk_answer_no")
-	private Answer answer1;
+	@OneToMany(mappedBy = "question")
+	private List<AnswerOtm> answerList = new ArrayList<AnswerOtm>();
 	
 	
 	@Column(name = "question")
 	private String question;
 	
 	
-	public Question() {
+	public QuestionOtm() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Question(String question) {
+	public QuestionOtm(String question) {
 		super();
 		this.question = question;
 	}
@@ -49,12 +52,13 @@ public class Question {
 	}
 	
 	
-	public Answer getAnswer() {
-		return answer1;
+	public List<AnswerOtm> getAnswerList() {
+		return answerList;
 	}
-	public void setAnswer(Answer answer) {
-		this.answer1 = answer;
+	public void setAnswerList(List<AnswerOtm> answerList) {
+		this.answerList = answerList;
 	}
+	
 	@Override
 	public String toString() {
 		return "Question [questionNo=" + questionNo + ", question=" + question + "]";

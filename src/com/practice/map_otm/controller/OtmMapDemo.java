@@ -1,4 +1,4 @@
-package com.practice.map_oto.controller;
+package com.practice.map_otm.controller;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -10,12 +10,14 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+import com.practice.map_otm.model.AnswerOtm;
+import com.practice.map_otm.model.QuestionOtm;
 import com.practice.map_oto.model.Answer;
 import com.practice.map_oto.model.Question;
 import com.practice.model.Address;
 import com.practice.model.Student;
 
-public class OtoMapDemo {
+public class OtmMapDemo {
 	public static void main(String[] args) throws IOException {
 		Configuration config = new Configuration().configure("com/practice/cfg/hibernate.cfg.xml");
 		SessionFactory factory = config.buildSessionFactory();
@@ -23,21 +25,29 @@ public class OtoMapDemo {
 		Transaction txn = null;
 		
 		
-		Question question1 = new Question("What is your name?");
-		Question question2 = new Question("What is your roll?");
-		Question question3 = new Question("What is your city?");
+		QuestionOtm question1 = new QuestionOtm("question-1?");
+		QuestionOtm question2 = new QuestionOtm("question-2?");
+		QuestionOtm question3 = new QuestionOtm("question-3?");
 		
-		Answer answer1 = new Answer("My name is Ankan Mukherjee");
-		Answer answer2 = new Answer("My roll is 1828049");
-		Answer answer3 = new Answer("My city is Chinsurah");
+		AnswerOtm answer1 = new AnswerOtm("answer-1");
+		AnswerOtm answer2 = new AnswerOtm("answer-2");
+		AnswerOtm answer3 = new AnswerOtm("answer-3");
+		AnswerOtm answer4 = new AnswerOtm("answer-4");
+		AnswerOtm answer5 = new AnswerOtm("answer-5");
 		
-		question1.setAnswer(answer1);
-		question2.setAnswer(answer2);
-		question3.setAnswer(answer3);
-
+		
+		question1.getAnswerList().add(answer1);
+		question1.getAnswerList().add(answer2);
+		question2.getAnswerList().add(answer3);
+		question3.getAnswerList().add(answer4);
+		question3.getAnswerList().add(answer5);
+		
 		answer1.setQuestion(question1);
-		answer2.setQuestion(question2);
-		answer3.setQuestion(question3);
+		answer2.setQuestion(question1);
+		answer3.setQuestion(question2);
+		answer4.setQuestion(question3);
+		answer5.setQuestion(question3);
+
 		
 			try {
 				txn = session.beginTransaction();
@@ -47,6 +57,8 @@ public class OtoMapDemo {
 				session.save(answer1);
 				session.save(answer2);
 				session.save(answer3);
+				session.save(answer4);
+				session.save(answer5);
 				txn.commit();
 			} catch (HibernateException e) {
 				if (txn != null)
@@ -54,15 +66,11 @@ public class OtoMapDemo {
 				e.printStackTrace();
 			} finally {
 				// Fetching .......
-				Question q = session.get(Question.class,1);
-				System.out.println("Question: "+q.getQuestion()+"\t Answer: "+q.getAnswer().getAnswer());
+				QuestionOtm q = session.get(QuestionOtm.class,1);
+				System.out.println("Question: "+q.getQuestion()+"\t Answer: "+q.getAnswerList().toString());
 				
 				session.close();
 				factory.close();
 			}
-			
-			
-			
-
 	}
 }

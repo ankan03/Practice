@@ -1,4 +1,4 @@
-package com.practice.map_oto.model;
+package com.practice.map_otm.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -6,12 +6,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "answer")
-public class Answer {
+@Table(name = "answer_otm")
+public class AnswerOtm {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,18 +20,18 @@ public class Answer {
 	private int answerNo;
 	private String answer;
 	
-	@OneToOne(mappedBy = "answer1")
-	@JoinColumn(name = "fk_question_no")
-	private Question question;
+	@ManyToOne
+	@JoinColumn(name = "fk_question_id")
+	private QuestionOtm question;
 	
 	
-	public Answer() {
+	public AnswerOtm() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
 
-	public Answer(String answer) {
+	public AnswerOtm(String answer) {
 		super();
 		this.answer = answer;
 	}
@@ -56,12 +57,12 @@ public class Answer {
 	}
 
 
-	public Question getQuestion() {
+	public QuestionOtm getQuestion() {
 		return question;
 	}
 
 
-	public void setQuestion(Question question) {
+	public void setQuestion(QuestionOtm question) {
 		this.question = question;
 	}
 
