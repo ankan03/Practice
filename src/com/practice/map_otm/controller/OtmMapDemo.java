@@ -67,7 +67,11 @@ public class OtmMapDemo {
 			} finally {
 				// Fetching .......
 				QuestionOtm q = session.get(QuestionOtm.class,1);
-				System.out.println("Question: "+q.getQuestion()+"\t Answer: "+q.getAnswerList().toString());
+				System.out.println("Question: "+q.getQuestion());
+				//When we will ask for any data related to answerList then only Quarry will fire for it otherwise it will not fire Quarry to fetch the answer list
+				//This property is called LAZY LOADING(It is default property of hibernate , we can override this into the specific model class)
+				//In case of EAGER LOADING hibernate will fetch all the data first time
+				System.out.println("Answer: "+q.getAnswerList().toString());
 				
 				session.close();
 				factory.close();

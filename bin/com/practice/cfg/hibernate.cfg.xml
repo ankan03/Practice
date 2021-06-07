@@ -16,6 +16,8 @@
 
 		<!-- Echo the SQL to stdout -->
 		<property name="show_sql">true</property>
+		<!-- This property is used to format SQL quarry -->
+		<!-- <property name="format_sql">true</property> -->
 
 		<mapping class="com.practice.model.Student" />
 		<mapping class="com.practice.model.Address" />

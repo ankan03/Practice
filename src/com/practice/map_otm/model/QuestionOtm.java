@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -21,6 +22,8 @@ public class QuestionOtm {
 	@Column(name = "question_no")
 	private int questionNo;
 	
+	//@OneToMany(mappedBy = "question" , fetch = FetchType.EAGER)
+	//by default hibernate fetch all the data in LAZY LOADING manner we can override fetch property to change it
 	@OneToMany(mappedBy = "question")
 	private List<AnswerOtm> answerList = new ArrayList<AnswerOtm>();
 	
