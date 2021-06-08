@@ -1,4 +1,4 @@
-package com.maven.MavenDemo;
+package com.maven;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

@@ -1,4 +1,4 @@
-package com.maven.MavenDemo.annotation;
+package com.maven.annotation;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -19,7 +19,7 @@ import org.springframework.context.annotation.Configuration;
 //}
 
 @Configuration
-@ComponentScan(basePackages = "com.maven.MavenDemo.annotation")
+@ComponentScan(basePackages = "com.maven.annotation")
 public class AppConfig {
 	
 }

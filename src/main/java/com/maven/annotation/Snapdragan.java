@@ -1,4 +1,4 @@
-package com.maven.MavenDemo.annotation;
+package com.maven.annotation;
 
 import org.springframework.stereotype.Component;
 

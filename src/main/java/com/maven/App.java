@@ -1,4 +1,4 @@
-package com.maven.MavenDemo;
+package com.maven;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

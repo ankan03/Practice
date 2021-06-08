@@ -1,4 +1,4 @@
-package com.maven.MavenDemo;
+package com.maven;
 
 public interface Vehicle {
 	void drive();

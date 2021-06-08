@@ -1,4 +1,4 @@
-package com.maven.MavenDemo.annotation;
+package com.maven.annotation;
 
 public interface MobileProcessor {
 	void process();
