@@ -1,4 +1,4 @@
-package com.springcore.SpringCoreLCWD;
+package com.springcore;
 
 public class Student {
 	private int studentId;
