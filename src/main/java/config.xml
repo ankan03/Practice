@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+  
+  	<!-- 1st Approach -->
+	<!-- <bean id="studentbean" class="com.springcore.SpringCoreLCWD.Student">  
+		<property name="studentId" value="1828049"></property>
+		<property name="studentName" value="Ankan Mukherjee"></property>
+		<property name="studentAddress" value="Chinsurah , West Bengal"></property>  
+	</bean> -->
+	
+	<!-- 2nd Approach -->
+	<!-- <bean class="com.springcore.SpringCoreLCWD.Student" name="studentbean">  
+		<property name="studentId" value="1828049"></property>
+		<property name="studentName" value="Ankan Mukherjee"></property>
+		<property name="studentAddress" value="Chinsurah , West Bengal"></property>  
+	</bean>  -->
+	
+	<!-- 3rd Approach -->
+	<bean class="com.springcore.SpringCoreLCWD.Student" name="studentbean">  
+		<property name="studentId">
+			<value>1828049</value>
+		</property>
+		
+		<property name="studentName">
+			<value>Ankan Mukherjee</value>
+		</property>
+		
+		<property name="studentAddress">
+			<value>Chinsurah , West Bengal</value>
+		</property>  
+	</bean>  
+	
+	
+  
+</beans>  
