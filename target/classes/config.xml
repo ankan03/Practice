@@ -33,6 +33,21 @@
 		<property name="studentAddress">
 			<value>Chinsurah , West Bengal</value>
 		</property>  
+	</bean> 
+	
+	
+	<bean class="com.springcore.SpringCoreLCWD.Student" name="studentbean1">  
+		<property name="studentId">
+			<value>1828043</value>
+		</property>
+		
+		<property name="studentName">
+			<value>Abhishek Raj</value>
+		</property>
+		
+		<property name="studentAddress">
+			<value>Patna , Bihar</value>
+		</property>  
 	</bean>  
 	
 	
