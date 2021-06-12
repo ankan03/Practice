@@ -12,7 +12,7 @@
 		<constructor-arg value="1"></constructor-arg>
 	</bean>
 	
-	<!-- We can explecitely defined datatype  -->
+	<!-- We can explecitely defined datatype (This is used when we use constructor overloading)  -->
 	<!-- <bean id="personbean" class="com.springcore.constructorInjection.Person">  
 		<constructor-arg value="Ankan Mukherjee"></constructor-arg>
 		<constructor-arg value="1" type="int"></constructor-arg>
