@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+  
+  	<!-- 1st Approach -->
+	<bean id="employeebean" class="com.springcore.constructorInjection.ambiguity.Addition">
+		<!-- If any of the constructor accepts string value then it will first priorotise that function  -->
+		<!-- Else it will call the first constructor (serialwise) which will match the parameter -->
+		<!-- To avoid this we have to define type explecitely to call any particuler constructor -->
+		<!-- <constructor-arg value="10"/>
+		<constructor-arg value="20"/>  -->
+		
+		
+		<!-- <constructor-arg value="10" type="double"/>
+		<constructor-arg value="20" type="double"/> -->
+		
+		<!-- If we want to change the order of the parameter of constructor then we have to use index tag -->
+		<constructor-arg value="10" type="double" index="1"/>
+		<constructor-arg value="20" type="double" index="0"/>
+		
+		 
+		
+		
+		
+	</bean>
+  
+</beans>  
