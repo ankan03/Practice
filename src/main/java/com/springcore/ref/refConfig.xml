@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+  
+  	
+	<bean class="com.springcore.ref.B" id="bref">  
+		<property name="id" value="10"></property>
+	</bean> 
+	
+	<!-- 1st Approach for putting ref tag -->
+	<!-- <bean class="com.springcore.ref.A" id="aref">  
+		<property name="id" value="100"/>
+		<property name="obj" ref="bref"/>
+	</bean>  -->
+	
+	<!-- 2nd Approach for putting ref tag-->
+	<!-- <bean class="com.springcore.ref.A" id="aref">  
+		<property name="id">
+			<value>100</value>
+		</property>
+		<property name="obj">
+			<ref bean="bref"/>
+		</property>
+	</bean>   -->
+	
+	<!-- 3rd Approach for putting ref tag-->
+	<bean class="com.springcore.ref.A" name="aref" p:id = "100" p:obj-ref = "bref"  />   
+	
+	
+	
+</beans>  
