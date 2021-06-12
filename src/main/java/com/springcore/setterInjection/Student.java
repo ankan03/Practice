@@ -1,4 +1,4 @@
-package com.springcore;
+package com.springcore.setterInjection;
 
 public class Student {
 	private int studentId;

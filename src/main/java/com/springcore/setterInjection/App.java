@@ -1,4 +1,4 @@
-package com.springcore;
+package com.springcore.setterInjection;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

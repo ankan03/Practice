@@ -7,18 +7,18 @@
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
   
   	
-	<bean class="com.springcore.ref.B" id="bref">  
+	<bean class="com.springcore.setterInjection.ref.B" id="bref">  
 		<property name="id" value="10"></property>
 	</bean> 
 	
 	<!-- 1st Approach for putting ref tag -->
-	<!-- <bean class="com.springcore.ref.A" id="aref">  
+	<!-- <bean class="com.springcore.setterInjection.ref.A" id="aref">  
 		<property name="id" value="100"/>
 		<property name="obj" ref="bref"/>
 	</bean>  -->
 	
 	<!-- 2nd Approach for putting ref tag-->
-	<!-- <bean class="com.springcore.ref.A" id="aref">  
+	<!-- <bean class="com.springcore.setterInjection.ref.A" id="aref">  
 		<property name="id">
 			<value>100</value>
 		</property>
@@ -28,7 +28,7 @@
 	</bean>   -->
 	
 	<!-- 3rd Approach for putting ref tag-->
-	<bean class="com.springcore.ref.A" name="aref" p:id = "100" p:obj-ref = "bref"  />   
+	<bean class="com.springcore.setterInjection.ref.A" name="aref" p:id = "100" p:obj-ref = "bref"  />   
 	
 	
 	

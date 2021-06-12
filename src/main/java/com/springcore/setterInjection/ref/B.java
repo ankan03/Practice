@@ -1,4 +1,4 @@
-package com.springcore.ref;
+package com.springcore.setterInjection.ref;
 
 public class B {
 	private int id;

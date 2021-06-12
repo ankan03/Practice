@@ -7,21 +7,21 @@
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
   
   	<!-- 1st Approach -->
-	<!-- <bean id="studentbean" class="com.springcore.SpringCoreLCWD.Student">  
+	<!-- <bean id="studentbean" class="com.springcore.setterInjection.Student">  
 		<property name="studentId" value="1828049"></property>
 		<property name="studentName" value="Ankan Mukherjee"></property>
 		<property name="studentAddress" value="Chinsurah , West Bengal"></property>  
 	</bean> -->
 	
 	<!-- 2nd Approach -->
-	<!-- <bean class="com.springcore.SpringCoreLCWD.Student" name="studentbean">  
+	<!-- <bean class="com.springcore.setterInjection.Student" name="studentbean">  
 		<property name="studentId" value="1828049"></property>
 		<property name="studentName" value="Ankan Mukherjee"></property>
 		<property name="studentAddress" value="Chinsurah , West Bengal"></property>  
 	</bean>  -->
 	
 	<!-- 3rd Approach -->
-	<bean class="com.springcore.SpringCoreLCWD.Student" name="studentbean">  
+	<bean class="com.springcore.setterInjection.Student" name="studentbean">  
 		<property name="studentId">
 			<value>1828049</value>
 		</property>
@@ -36,7 +36,7 @@
 	</bean> 
 	
 	
-	<bean class="com.springcore.SpringCoreLCWD.Student" name="studentbean1">  
+	<bean class="com.springcore.setterInjection.Student" name="studentbean1">  
 		<property name="studentId">
 			<value>1828043</value>
 		</property>
