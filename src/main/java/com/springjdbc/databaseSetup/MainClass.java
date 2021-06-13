@@ -12,13 +12,17 @@ public class MainClass {
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/springjdbc/databaseSetup/config.xml");
 		StudentDaoImpl daoImpl = context.getBean("studentDaoImplementation",StudentDaoImpl.class);
 		
-		//Insert
+		//INSERT
 //		int result = daoImpl.insert(new Student(3, "Abhishek", "Patna"));
 //		System.out.println("No of row inserted: "+result);
 		
-		//Update
-		int result = daoImpl.update(new Student(1, "Ankan", "Chinsurah"));
-		System.out.println(result+" Row updated");
+		//UPDATE
+//		int result = daoImpl.update(new Student(1, "Ankan", "Chinsurah"));
+//		System.out.println(result+" Row updated");
+		
+		//DELETE
+		int result = daoImpl.delete(5);
+		System.out.println(result+" Row deleted");
 	}
 
 }
