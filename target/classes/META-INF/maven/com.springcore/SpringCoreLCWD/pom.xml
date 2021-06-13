@@ -36,6 +36,22 @@
 	    <version>5.3.6</version>
 	</dependency>
 	
+	<!-- Used for connecting with Spring Project -->
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-jdbc</artifactId>
+	    <version>5.3.6</version>
+	</dependency>
+	
+	<!-- To connect mysql with java application -->
+	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+	<dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <version>5.1.47</version>
+	</dependency>
+	
     <!-- Note that both @PostConstruct and @PreDestroy annotations are part of Java EE. 
     And since Java EE has been deprecated in Java 9 and removed in Java 11 we have to add an additional dependency 
     to use these annotations: -->
