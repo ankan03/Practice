@@ -10,10 +10,9 @@ public class MainClass {
 		// TODO Auto-generated method stub
 
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/springjdbc/databaseSetup/config.xml");
-		JdbcTemplate template = context.getBean("jdbcTemplate",JdbcTemplate.class);
+		StudentDaoImpl daoImpl = context.getBean("studentDaoImplementation",StudentDaoImpl.class);
 		
-		String sqlQuery = "INSERT INTO student_table (student_id, student_name, student_city) VALUES (?,?,?)";
-		int result = template.update(sqlQuery,2,"Mukherjee","Kolkata");
+		int result = daoImpl.insert(new Student(3, "Abhishek", "Patna"));
 		System.out.println("No of row inserted: "+result);
 	}
 

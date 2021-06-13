@@ -2,15 +2,15 @@ package com.springjdbc.databaseSetup;
 
 public class Student {
 	private int studentId;
-	private int studentName;
-	private int studentCity;
+	private String studentName;
+	private String studentCity;
 	
 	public Student() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Student(int studentId, int studentName, int studentCity) {
+	public Student(int studentId, String studentName, String studentCity) {
 		super();
 		this.studentId = studentId;
 		this.studentName = studentName;
@@ -25,19 +25,19 @@ public class Student {
 		this.studentId = studentId;
 	}
 
-	public int getStudentName() {
+	public String getStudentName() {
 		return studentName;
 	}
 
-	public void setStudentName(int studentName) {
+	public void setStudentName(String studentName) {
 		this.studentName = studentName;
 	}
 
-	public int getStudentCity() {
+	public String getStudentCity() {
 		return studentCity;
 	}
 
-	public void setStudentCity(int studentCity) {
+	public void setStudentCity(String studentCity) {
 		this.studentCity = studentCity;
 	}
 
@@ -46,7 +46,6 @@ public class Student {
 		return "Student [studentId=" + studentId + ", studentName=" + studentName + ", studentCity=" + studentCity
 				+ "]";
 	}
-	
-	
+
 	
 }
