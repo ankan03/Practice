@@ -6,8 +6,15 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class JavaConfig {
+	
 	@Bean
+	public WatchingMovie getMovie() {
+		return new WatchingMovie();
+	}
+	
+	//We can change default bean name also
+	@Bean(name = {"getStudent1","getStudent2","getStudent3"})
 	public Student getStudent() {
-		return new Student();
+		return new Student(getMovie());
 	}
 }
