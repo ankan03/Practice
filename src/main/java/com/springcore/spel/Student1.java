@@ -20,6 +20,9 @@ public class Student1 {
 	@Value("#{new java.lang.String('Ankan Mukherjee')}")
 	private String myName;	
 	
+	@Value("#{5-2>1}")
+	private boolean isActive;
+	
 	
 	public Student1() {
 		super();
@@ -67,12 +70,23 @@ public class Student1 {
 	public void setMyName(String myName) {
 		this.myName = myName;
 	}
+	
+	
+
+	public boolean isActive() {
+		return isActive;
+	}
+
+	public void setActive(boolean isActive) {
+		this.isActive = isActive;
+	}
 
 	@Override
 	public String toString() {
 		return "Student1 [id=" + id + ", marks=" + marks + ", mySqrt=" + mySqrt + ", myPiValue=" + myPiValue
-				+ ", myName=" + myName + "]";
+				+ ", myName=" + myName + ", isActive=" + isActive + "]";
 	}
 
+	
 	
 }
