@@ -11,6 +11,16 @@ public class Student1 {
 	@Value("#{15+29}")
 	private int marks;
 	
+	@Value("#{T(java.lang.Math).sqrt(36)}")
+	private double mySqrt;
+	
+	@Value("#{T(java.lang.Math).PI}")
+	private double myPiValue;
+	
+	@Value("#{new java.lang.String('Ankan Mukherjee')}")
+	private String myName;	
+	
+	
 	public Student1() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -31,12 +41,38 @@ public class Student1 {
 	public void setMarks(int marks) {
 		this.marks = marks;
 	}
+	
+	
+
+	public double getMySqrt() {
+		return mySqrt;
+	}
+
+	public void setMySqrt(double mySqrt) {
+		this.mySqrt = mySqrt;
+	}
+
+	public double getMyPiValue() {
+		return myPiValue;
+	}
+
+	public void setMyPiValue(double myPiValue) {
+		this.myPiValue = myPiValue;
+	}
+
+	public String getMyName() {
+		return myName;
+	}
+
+	public void setMyName(String myName) {
+		this.myName = myName;
+	}
 
 	@Override
 	public String toString() {
-		return "Student1 [id=" + id + ", marks=" + marks + "]";
+		return "Student1 [id=" + id + ", marks=" + marks + ", mySqrt=" + mySqrt + ", myPiValue=" + myPiValue
+				+ ", myName=" + myName + "]";
 	}
-	
-	
+
 	
 }
