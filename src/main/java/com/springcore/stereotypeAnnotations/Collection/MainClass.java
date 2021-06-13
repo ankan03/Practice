@@ -1,4 +1,4 @@
-package com.springcore.stereotypeAnnotations;
+package com.springcore.stereotypeAnnotations.Collection;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
@@ -10,9 +10,10 @@ public class MainClass {
 
 	public static void main(String[] args) {
 
-		ApplicationContext context = new ClassPathXmlApplicationContext("com/springcore/stereotypeAnnotations/config.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("com/springcore/stereotypeAnnotations/Collection/config.xml");
         DemoStudent studentObj  = context.getBean("ankan",DemoStudent.class);
         System.out.println(studentObj);
+        System.out.println(studentObj.getFriendList().getClass().getName());
 	}
 
 }

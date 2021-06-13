@@ -13,8 +13,14 @@
     http://www.springframework.org/schema/util/spring-util-3.0.xsd
     ">
 	
-	<context:component-scan base-package="com.springcore.stereotypeAnnotations"></context:component-scan>
-	
+	<context:component-scan base-package="com.springcore.stereotypeAnnotations.Collection"></context:component-scan>
+	<util:list list-class="java.util.ArrayList" id="myList">
+		<value>Abhishek</value>
+		<value>Anubhav</value>
+		<value>Abhedya</value>
+		<value>Harsh</value>
+		<value>Keshav</value>
+	</util:list>
 	
 	
 	

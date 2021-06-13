@@ -1,4 +1,6 @@
-package com.springcore.stereotypeAnnotations;
+package com.springcore.stereotypeAnnotations.Collection;
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -10,6 +12,8 @@ public class DemoStudent {
 	private int studentId;
 	@Value("Ankan Mukherjee")
 	private String studentName;
+	@Value("#{myList}")
+	private List<String> friendList;
 	
 	public DemoStudent() {
 		super();
@@ -32,9 +36,19 @@ public class DemoStudent {
 		this.studentName = studentName;
 	}
 
+	public List<String> getFriendList() {
+		return friendList;
+	}
+
+	public void setFriendList(List<String> friendList) {
+		this.friendList = friendList;
+	}
+
 	@Override
 	public String toString() {
-		return "DemoStudent [studentId=" + studentId + ", studentName=" + studentName + "]";
+		return "DemoStudent [studentId=" + studentId + ", studentName=" + studentName + ", friendList=" + friendList
+				+ "]";
 	}
+
 	
 }
