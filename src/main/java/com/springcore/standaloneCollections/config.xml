@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"  
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:util="http://www.springframework.org/schema/util"   
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util-3.0.xsd
+    ">
+	
+	<!-- Standalone List -->
+	<!-- We can use different type of list java.util.LinkedList/java.util.Vector/...  -->
+	<!-- <util:list list-class="java.util.LinkedList" id="myFriendList">
+		<value>Abhishek</value>
+		<value>Anubhan</value>
+		<value>Harsh</value>
+		<value>Abhedya</value>
+		<value>Rahul</value>
+	</util:list> -->
+	
+	<util:list list-class="java.util.Vector" id="myFriendList">
+		<value>Abhishek</value>
+		<value>Anubhan</value>
+		<value>Harsh</value>
+		<value>Abhedya</value>
+		<value>Rahul</value>
+	</util:list>
+	
+	
+	<!-- Standalone Map -->
+	<!-- We can use different type of list java.util.HashMap/java.util.TreeMap/...  -->
+	<!-- <util:map map-class="java.util.HashMap" id="courseFees">
+		<entry key="Android"  value="2000"></entry>
+		<entry key="Web Development"  value="5000"/>
+		<entry key="Spring" value="4000"/>
+		<entry key="Hybernet"  value="2300"/>
+	</util:map> -->
+	<util:map map-class="java.util.TreeMap" id="courseFees">
+		<entry key="Android"  value="2000"></entry>
+		<entry key="Web Development"  value="5000"/>
+		<entry key="Spring" value="4000"/>
+		<entry key="Hybernet"  value="2300"/>
+	</util:map>
+	
+	<!-- Standalone Properties -->
+	<util:properties id="sampleProperties">
+		<prop key="key-1"> Property-1</prop>
+		<prop key="key-2"> Property-2</prop>
+		<prop key="key-3"> Property-3</prop>
+		<prop key="key-4"> Property-4</prop>
+	</util:properties>
+	
+	<bean id="person" class="com.springcore.standaloneCollections.Person">
+		<!-- 1st Approach -->  
+		<!-- <property name="friendList">
+			<ref bean="myFriendList"/>
+		</property> -->
+		
+		<!-- 2nd Approach -->
+		<property name="friendList" ref="myFriendList"/>
+		<property name="feesStructure" ref="courseFees"/>
+		<property name="properties" ref="sampleProperties"></property>
+	</bean>
+	
+	
+	
+	
+</beans>  
