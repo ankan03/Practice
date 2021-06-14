@@ -1,5 +1,7 @@
 package com.springjdbc.databaseSetup;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -25,8 +27,15 @@ public class MainClass {
 //		System.out.println(result+" Row deleted");
 		
 		//SELECT Single Student
-		Student student = daoImpl.getStudent(3);
-		System.out.println(student);
+//		Student student = daoImpl.getStudent(3);
+//		System.out.println(student);
+		
+		//SELECT list of Student
+		List<Student> students = daoImpl.getAllStudent();
+		for (Student student : students) {
+			System.out.println(student);
+		}
+		
 	}
 
 }
