@@ -3,6 +3,7 @@ package com.springjdbc.databaseSetup;
 import java.util.List;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -11,8 +12,14 @@ public class MainClass {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		ApplicationContext context = new ClassPathXmlApplicationContext("com/springjdbc/databaseSetup/config.xml");
+		//This is used for Spring Jdbc Configuration WITH XML
+//		ApplicationContext context = new ClassPathXmlApplicationContext("com/springjdbc/databaseSetup/config.xml");
+		
+		//Spring Jdbc Configuration WITHOUT XML
+		ApplicationContext context = new AnnotationConfigApplicationContext(JdbcConfig.class);
+		
 		StudentDaoImpl daoImpl = context.getBean("studentDaoImplementation",StudentDaoImpl.class);
+		
 		
 		//INSERT
 //		int result = daoImpl.insert(new Student(3, "Abhishek", "Patna"));
