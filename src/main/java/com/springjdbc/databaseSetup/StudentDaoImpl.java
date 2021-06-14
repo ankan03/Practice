@@ -2,17 +2,28 @@ package com.springjdbc.databaseSetup;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 
+//If we don't want to use this extra code[inside JdbcConfig.java] we have to add 
+//@ComponentScan(basePackages =  {"com.springjdbc.databaseSetup"}) in JdbcConfig.java class
+//@Component in StudentDaoImpl.java class
+//@Autowired in JdbcTemplate property inside StudentDaoImpl.java class
+@Component("studentDaoImplementation")
 public class StudentDaoImpl implements StudentDao {
 
+	//We can declare @Autowired here
+//	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
 	public JdbcTemplate getJdbcTemplate() {
 		return jdbcTemplate;
 	}
-
+	
+	//We can declare @Autowired here
+	@Autowired
 	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
 	}
