@@ -1,6 +1,7 @@
 package com.springjdbc.databaseSetup;
 
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 
 public class StudentDaoImpl implements StudentDao {
 
@@ -30,6 +31,14 @@ public class StudentDaoImpl implements StudentDao {
 		String sqlQuery = "DELETE FROM student_table WHERE student_id=?";
 		int result = jdbcTemplate.update(sqlQuery,id);
 		return result;
+	}
+
+	//Get Single student Record
+	public Student getStudent(int id) {
+		String sqlQuery = "SELECT * FROM student_table WHERE student_id=?";
+		RowMapper<Student> rowMapper = new RowMapperImpl();
+		Student student = jdbcTemplate.queryForObject(sqlQuery, rowMapper, id);
+		return student;
 	}
 
 	

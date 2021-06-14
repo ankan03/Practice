@@ -21,8 +21,12 @@ public class MainClass {
 //		System.out.println(result+" Row updated");
 		
 		//DELETE
-		int result = daoImpl.delete(5);
-		System.out.println(result+" Row deleted");
+//		int result = daoImpl.delete(5);
+//		System.out.println(result+" Row deleted");
+		
+		//SELECT Single Student
+		Student student = daoImpl.getStudent(3);
+		System.out.println(student);
 	}
 
 }
