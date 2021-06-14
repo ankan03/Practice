@@ -52,6 +52,15 @@
 	    <version>5.3.6</version>
 	</dependency>
 	
+	<!-- Used for using Spring ORM with Hibernate-->
+	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-core</artifactId>
+	    <version>5.4.10.Final</version>
+	</dependency>
+	
+	
 	
 	<!-- To connect mysql with java application -->
 	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
