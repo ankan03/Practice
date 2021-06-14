@@ -1,4 +1,4 @@
-package com.springjdbc.databaseSetup;
+package com.springjdbc.introduction;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 
 //If we don't want to use this extra code[inside JdbcConfig.java] we have to add 
-//@ComponentScan(basePackages =  {"com.springjdbc.databaseSetup"}) in JdbcConfig.java class
+//@ComponentScan(basePackages =  {"com.springjdbc.introduction"}) in JdbcConfig.java class
 //@Component in StudentDaoImpl.java class
 //@Autowired in JdbcTemplate property inside StudentDaoImpl.java class
 @Component("studentDaoImplementation")

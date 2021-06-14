@@ -24,7 +24,7 @@
 		<property name="dataSource" ref="jdbcDataSource"></property>
 	</bean>
 	
-	<bean class="com.springjdbc.databaseSetup.StudentDaoImpl" name="studentDaoImplementation">
+	<bean class="com.springjdbc.introduction.StudentDaoImpl" name="studentDaoImplementation">
 		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
 	</bean>
 </beans>  

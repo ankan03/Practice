@@ -1,4 +1,4 @@
-package com.springjdbc.databaseSetup;
+package com.springjdbc.introduction;
 
 public class Student {
 	private int studentId;

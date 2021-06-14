@@ -1,4 +1,4 @@
-package com.springjdbc.databaseSetup;
+package com.springjdbc.introduction;
 
 import java.util.List;
 

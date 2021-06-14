@@ -1,4 +1,4 @@
-package com.springjdbc.databaseSetup;
+package com.springjdbc.introduction;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ public class MainClass {
 		// TODO Auto-generated method stub
 
 		//This is used for Spring Jdbc Configuration WITH XML
-//		ApplicationContext context = new ClassPathXmlApplicationContext("com/springjdbc/databaseSetup/config.xml");
+//		ApplicationContext context = new ClassPathXmlApplicationContext("com/springjdbc/introduction/config.xml");
 		
 		//Spring Jdbc Configuration WITHOUT XML
 		ApplicationContext context = new AnnotationConfigApplicationContext(JdbcConfig.class);

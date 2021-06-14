@@ -1,4 +1,4 @@
-package com.springjdbc.databaseSetup;
+package com.springjdbc.introduction;
 
 import javax.sql.DataSource;
 
@@ -10,7 +10,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.stereotype.Component;
 
 @Configuration
-@ComponentScan(basePackages =  {"com.springjdbc.databaseSetup"})
+@ComponentScan(basePackages =  {"com.springjdbc.introduction"})
 public class JdbcConfig {
 	@Bean(name = {"ds"})
 	public DataSource getDataSource() {
@@ -30,7 +30,7 @@ public class JdbcConfig {
 	}
 	
 	//If we don't want to use this extra code[inside JdbcConfig.java] we have to add 
-	//@ComponentScan(basePackages =  {"com.springjdbc.databaseSetup"}) in JdbcConfig.java class
+	//@ComponentScan(basePackages =  {"com.springjdbc.introduction"}) in JdbcConfig.java class
 	//@Component in StudentDaoImpl.java class
 	//@Autowired in JdbcTemplate property inside StudentDaoImpl.java class
 //	@Bean(name = {"studentDaoImplementation"})
