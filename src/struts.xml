@@ -10,5 +10,12 @@ Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 			<result name="success">/success.jsp</result>  
 			<result name="error">/error.jsp</result>  
 		</action>  
+	</package>
+	
+	<package name="login" extends="struts-default" namespace="/">  
+  		<action name="getLogin" class="com.struts2.introduction.LoginAction">  
+			<result name="success">/index.jsp</result>  
+			<result name="failure">/error.jsp</result>  
+		</action>  
 	</package>  
 </struts>    

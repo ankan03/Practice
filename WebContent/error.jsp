@@ -6,7 +6,7 @@
 <meta charset="ISO-8859-1">
 <title>Error</title>
 </head>
-<body>
+<body bgcolor="red">
 Failure :(
 </body>
 </html>
