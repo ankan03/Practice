@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-aaaaaaaaaaaaaaa
+	<form method="post" action="/Struts2Tutorial/demo/getTutorial.action">
+		<h2>Enter Subject</h2>
+		<input type="text" name="subject"/>
+		<button type="submit">Submit</button>
+	</form>
 </body>
 </html>
