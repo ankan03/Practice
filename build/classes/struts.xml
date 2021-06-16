@@ -5,17 +5,21 @@ Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 	<!-- If we want to add any sub header we have to add namespace -->
 	<!-- If namespace="demo" then  http://localhost:8081/Struts2Tutorial/getTutorial.action       will converted to 
 		 						   http://localhost:8081/Struts2Tutorial/demo/getTutorial.action-->
+		 						   
+	
 	<package name="default" extends="struts-default" namespace="/demo">  
   		<action name="getTutorial" class="com.struts2.introduction.Action">  
 			<result name="success">/success.jsp</result>  
 			<result name="error">/error.jsp</result>  
 		</action>  
 	</package>
+	<!-- We can include different file and put rest of the code there [It is a good practice to use different file for every action]  -->
+	<include file="login.xml"></include>
 	
-	<package name="login" extends="struts-default" namespace="/">  
+	<!-- <package name="login" extends="struts-default" namespace="/">  
   		<action name="getLogin" class="com.struts2.introduction.LoginAction">  
 			<result name="success">/index.jsp</result>  
 			<result name="failure">/error.jsp</result>  
 		</action>  
-	</package>  
+	</package>   -->
 </struts>    

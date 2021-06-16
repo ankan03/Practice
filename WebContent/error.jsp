@@ -7,6 +7,7 @@
 <title>Error</title>
 </head>
 <body bgcolor="red">
-Failure :(
+<h2 align="center">Failure :(</h2>
+
 </body>
 </html>

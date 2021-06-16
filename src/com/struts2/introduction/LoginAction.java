@@ -1,15 +1,18 @@
 package com.struts2.introduction;
 
-public class LoginAction {
+import com.opensymphony.xwork2.Action;
+
+//We can implement com.opensymphony.xwork2.Action and use different standared string
+public class LoginAction implements Action {
 	private String userId;
 	private String password;
 	
-	public String execute() {
+	public String execute()  {
 		System.out.println("Inside execute()  method of LoginAction Class");
 		if (userId.equals("ankan") && password.equals("123")) {
-			return "success";
+			return SUCCESS;
 		} else {
-			return "failure";
+			return ERROR;
 		}
 	}
 	
